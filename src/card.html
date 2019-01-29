@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div id="root">
+      <header>
+          <h1>¡Felicidadesm tu credencial está lista!</h1>
+      </header>
+
+      <nav>
+        <ul>
+          <li><a href = 'index.html'>Home</a></li> <!-- LOGO -->
+          <li><a href = 'help.html'>Ayuda</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <div>
+          <label>Nombre: </label>
+          <span id = 'resultUsername'></span>
+        </div>
+
+        <div>
+          <label for="">Nacionalidad: </label>
+          <span id = 'resultNationality'></span>
+        </div>
+
+        <div>
+          <label for="">Contacto de emergencia: </label>
+          <span id = 'resultEmergencyName'></span>
+        </div>
+
+        <div>
+          <label for="">Perfil de Facebook del contacto de emergencia: </label>
+          <span id = 'resultEmergencyFacebook'></span>
+        </div>
+
+        <div>
+          <label for="">Alergias: </label>
+          <span id = resultAllergies></span>
+        </div>
+
+        <div>
+          <label for="">Notas: </label>
+          <span id = 'resultNotes'></span>
+        </div>
+      </div>
+
+      <input type="button" onclick="toForm()" value = 'Crear nueva credencial'>
+
+    </div>
+
+    <script src="cipher.js"></script>
+    <script src="index.js"></script>
+
+  </body>
+
+  <footer>Creado por Mel :)</footer>
+</html>

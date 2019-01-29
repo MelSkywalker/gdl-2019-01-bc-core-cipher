@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <script src="cipher.js"></script>
+    <script src="index.js"></script>
+
+    <header>
+      <h1>¡Crea tu credencial de viaje!</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href = 'index.html'>Home</a></li> <!-- LOGO -->
+        <li><a href = 'help.html'>Ayuda</a></li>
+      </ul>
+    </nav>
+
+    <div>
+      <h2>Ingresa tus datos:</h2>
+        <form>
+
+          <div title="Escribe el número que será tu clave" >
+            <label for="offset">Clave (Número): </label>
+            <input type="text" name="offset">
+          </div>
+
+          <div title="Escribe tu nombre completo">
+            <label for="username">Nombre: </label>
+            <input type="text" id="username"> <!-- "for" del label se enlaza con "id" del input? o solo con "name"?-->
+          </div>
+
+          <div title="¿De qué país eres?">
+            <label for="nationality">Nacionalidad: </label>
+            <input type="text" id="nationality">
+          </div>
+
+          <div title="¿A quién contactar en caso de emergencia?">
+            <label for="emergencyName">Contacto de emergencia: </label>
+            <input type="text" id="emergencyName">
+          </div>
+
+          <div title="Perfil de Facebook de tu contacto de emergencia">
+            <label for="emergencyFacebook">Perfil de Facebook del contacto de emergencia: </label>
+            <input type="text" id="emergencyFacebook">
+          </div>
+
+          <div  title="¿Tienes alguna alergia? Si son más de una, sepáralas con un espacio">
+            <label for="allergies">Alergias: </label>
+            <input type="text" id="allergies">
+          </div>
+
+          <div  title="¿Algún dato extra que consideres NECESARIO añadir?">
+            <label for="notes">Notas: </label>
+            <textarea id="notes" rows="4" cols="20"></textarea>
+          </div>
+
+          <button type="reset" name="clear">Limpiar</button>
+          <input type="button" value ="Cifrar" name="encode" onclick="codeForm()">
+          <input type="button" value="Descrifrar" name="decode" oncanplay="decodeForm()">
+
+        </form>
+    </div>
+
+  </body>
+  <footer>Creado por Mel :)</footer>
+</html>
