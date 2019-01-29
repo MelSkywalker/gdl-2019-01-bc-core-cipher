@@ -1,9 +1,9 @@
 //Ir a la página del formulario
-const toForm() => {
+const toForm = () => {
   window.location = 'form.html';
 }
 
-const toCard() => {
+const toCard = () => {
   window.location = 'card.html';
 }
 

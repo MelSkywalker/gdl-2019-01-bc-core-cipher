@@ -63,8 +63,8 @@
           </div>
 
           <button type="reset" name="clear">Limpiar</button>
-          <input type="button" value ="Cifrar" name="encode" onclick="codeForm()">
-          <input type="button" value="Descrifrar" name="decode" oncanplay="decodeForm()">
+          <input type="button" value ="Cifrar" name="encode" onclick="cipher.encode(getOffset(),getString())">
+          <input type="button" value="Descrifrar" name="decode" onclick="cipher.decode(getOffset(),getString())" >
 
         </form>
     </div>
