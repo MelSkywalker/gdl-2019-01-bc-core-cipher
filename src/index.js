@@ -87,8 +87,3 @@ const decodeAllergies = () => {
 const decodeNotes = () => {
   document.getElementById('resultNotes').innerHTML = cipher.decode(getOffset(),getString('notes'));
 };
-
-//Limpiar campos
-const clean (elementToClean) => {
-  document.getElementById(elementToClean).value = '';
-}
