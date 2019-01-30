@@ -1,35 +1,21 @@
 window.cipher = {
 
   offset: 0,
-  string: '',
-
-/*
-  //método para obtener offset
-  getOffset = () => {
-    offset = parseInt(document.getElementsByName('offset')).value; //'offset' u offset ???
-    return offset;
-  }
-  
-  //método para guardar el valor escrito por el usuario y pasarlo a letras mayúsculas
-  getString = (userInfo) => {
-    string = (document.getElementsById('userInfo').value).toUpperCase(); // 'userInfo' o userInfo ???
-    return string;
-  }
-*/
+  phrase: '',
 
 //método para codificar
-  encode: function(offset, string) {
-
-    let array = string.split('');
+  encode: function(offset, phrase) {
+    let array = phrase.split('');
     let encodedString = '';
-    for(let i = 0 ; i < string.length ; i++) {
+    for(let i = 0 ; i < phrase.length ; i++) {
       if(array[i] === ' '){ //Si hay un espacio, dejarlo igual
         encodedString += ' ';
+        
       } else{
-        let x = (string.charCodeAt(i) - 65 + offset) % 26 + 65;
+        let x = (phrase.charCodeAt(i) - 65 + offset) % 26 + 65;
         encodedString += (String.fromCharCode(x));
       }
-    }
+    }    
     return encodedString;
   },
 
