@@ -9,17 +9,14 @@
 
   <body>
 
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
-
     <header>
       <h1>¡Crea tu credencial de viaje!</h1>
     </header>
 
     <nav>
       <ul>
-        <li><a href = 'index.html'>Home</a></li> <!-- LOGO -->
-        <li><a href = 'help.html'>Ayuda</a></li>
+        <li><a href = "index.html">Home</a></li> <!-- LOGO -->
+        <li><a href = "help.html">Ayuda</a></li>
       </ul>
     </nav>
 
@@ -34,7 +31,7 @@
 
           <div title="Escribe tu nombre completo">
             <label for="username">Nombre: </label>
-            <input type="text" id="username"> <!-- "for" del label se enlaza con "id" del input? o solo con "name"?-->
+            <input type="text" id="username">
           </div>
 
           <div title="¿De qué país eres?">
@@ -63,50 +60,51 @@
           </div>
 
           <button type="reset" name="clear">Limpiar</button>
-          <input type="button" value ="Cifrar" name="encode" onclick="encodedCard()">
-          <input type="button" value="Descrifrar" name="decode" onclick="decodedCard()" >
+          <input type="button" value ="Cifrar" name="encode" id="toEncode" >
+          <input type="button" value="Descrifrar" name="decode" id="toDecode" >
 
         </form>
     </div>
 
+    
     <div>
       <h2>¡Felicidades! Tu credencial de viaje está lista:</h2>
       <div>
         <div>
           <label>Nombre: </label>
-          <span id = 'resultUsername'></span>
+          <span id = "resultUsername"></span>
         </div>
 
         <div>
-          <label for="">Nacionalidad: </label>
-          <span id = 'resultNationality'></span>
+          <label>Nacionalidad: </label>
+          <span id = "resultNationality"></span>
         </div>
 
         <div>
-          <label for="">Contacto de emergencia: </label>
-          <span id = 'resultEmergencyName'></span>
+          <label>Contacto de emergencia: </label>
+          <span id = "resultEmergencyName"></span>
         </div>
 
         <div>
-          <label for="">Perfil de Facebook del contacto de emergencia: </label>
-          <span id = 'resultEmergencyFacebook'></span>
+          <label>Perfil de Facebook del contacto de emergencia: </label>
+          <span id = "resultEmergencyFacebook"></span>
         </div>
 
         <div>
-          <label for="">Alergias: </label>
-          <span id = resultAllergies></span>
+          <label>Alergias: </label>
+          <span id = "resultAllergies"></span>
         </div>
 
         <div>
-          <label for="">Notas: </label>
-          <span id = 'resultNotes'></span>
+          <label>Notas: </label>
+          <span id = "resultNotes"></span>
         </div>
       </div>
 
-      <button type="reset" name="clear">Crear nueva credencial</button>
-
     </div>
-
+    
+    <script src="cipher.js"></script>
+    <script src="form.js"></script>
   </body>
   <footer>Creado por Mel :)</footer>
 </html>
