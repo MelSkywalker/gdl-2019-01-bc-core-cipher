@@ -1,3 +1,23 @@
+##Proceso y decisiones de diseño
+Para esta webapp decidí iniciar con una interfaz que diera una pequeña explicación de su propósito.
+Utilicé pocos botones, de tamaño grande y color llamativo para que invitara al usarios a usarlos.
+Incluí una barra de navegación en la que se puede ingresar al Home o a la sección de ayuda.
+En general utilicé colores que refirieran al usuario a la playa.
+
+## Solución de un problema
+###Usuario
+Mi usuario es Raquel, chica de 25 años se irá a recorrer Sudamérica de mochilazo.
+Cuando contó el plan a su familia, le dijeron que es algo muy peligroso y que no debería arriesgarse.
+Sus amigos le dieron distintas recomendaciones, algunas se contradicen. Algunos le sugirieron cargar siempre con su pasaporte, algunos otros que lo deje bien escondido en los lugares donde se hospede.
+Raquel no sabe a quién hacerle caso, es su primer viaje sola.
+
+###Relación del usuario con el producto
+Con esta webapp, Raquel puede crear una credencial de viaje y así tener siempre con ella sus datos principales encriptados, así no tendrá que cargar para todos lados con su pasaporte o documentos oficiales y además, en caso de que pierda su cartera, puede estar segura de que sus datos personales no quedarán expuestos.
+
+
+
+
+
 # Cifrado César
 
 Cifrar significa codificar. El [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher)

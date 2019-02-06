@@ -4,39 +4,37 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Staatliches" rel="stylesheet">
   </head>
 
-  <body>
-    
+  <body id="indexBody">
 
     <div id="root">
     <header>
-      <h1>¡Crea tu credencial de viaje!</h1>
+      <nav class="navContainer">
+          <ul>
+            <li><a href = "index.html">Home</a></li> <!-- LOGO -->
+            <li><a href = "help.html">Ayuda</a></li>
+          </ul>
+       </nav>
     </header>
 
-    <nav>
-      <ul>
-        <li><a href = "index.html">Home</a></li> <!-- LOGO -->
-        <li><a href = "help.html">Ayuda</a></li>
-      </ul>
-    </nav>
+    <h1>¡Crea tu credencial de viaje!</h1>
 
-    <section>
-      <p>¡Viaja seguro!</p>
+    <div class="indexContainer">
+      <h3>¡Viaja seguro!</h3>
+      <figure id="indexLogo">
+          <img src="images/logo-travel-card.png" alt="logo" class="logo">
+      </figure>
       <p>Si vas a viajar, llegaste al sitio correcto.</p>
       <p> Aquí podrás crear una credencial cifrada para que solo las personas autorizadas puedan acceder a tus datos personales.</p>
-    </section>
-
-    <figure>
-      <!-- LOGO -->
-    </figure>
-
-    <form>
-      <input type="button" value="Ingresar" id="toForm" >
-    </form>
+      <form>
+        <input type="button" value="INGRESAR" id="toForm" class="buttons" >
+      </form>
+    </div>
 
     </div>
     <script src="index.js"></script>
   </body>
-  <footer>Creado por Mel :)</footer>
+  <footer><p>Creado por Mel :)</p></footer>
 </html>

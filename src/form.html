@@ -5,106 +5,111 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Staatliches" rel="stylesheet">
   </head>
 
   <body>
 
     <header>
-      <h1>¡Crea tu credencial de viaje!</h1>
+      <nav class="navContainer">
+        <ul>
+          <li><a href = "index.html">Home</a></li>
+          <li><a href = "help.html">Ayuda</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <nav>
-      <ul>
-        <li><a href = "index.html">Home</a></li> <!-- LOGO -->
-        <li><a href = "help.html">Ayuda</a></li>
-      </ul>
-    </nav>
+    <h1>¡Crea tu credencial de viaje!</h1>
 
-    <div>
+    <div id="cardForm">
       <h2>Ingresa tus datos:</h2>
-        <form>
+        <div id="userData">
+          <form>
 
-          <div title="Escribe el número que será tu clave" >
-            <label for="offset">Clave (Número): </label>
-            <input type="number" name = "offset" id="offset">
-          </div>
+            <div title="Escribe el número que será tu clave" class="divInput" id="offsetDiv">
+              <label for="offset">Clave (Número): </label>
+              <input type="number" name = "offset" id="offset">
+            </div>
 
-          <div title="Escribe tu nombre completo">
-            <label for="username">Nombre: </label>
-            <input type="text" id="username">
-          </div>
+            <div title="Escribe tu nombre completo" class="divInput">
+              <label for="username">Nombre: </label>
+              <input type="text" id="username">
+            </div>
 
-          <div title="¿De qué país eres?">
-            <label for="nationality">Nacionalidad: </label>
-            <input type="text" id="nationality">
-          </div>
+            <div title="¿De qué país eres?" class="divInput">
+              <label for="nationality">Nacionalidad: </label>
+              <input type="text" id="nationality">
+            </div>
 
-          <div title="¿A quién contactar en caso de emergencia?">
-            <label for="emergencyName">Contacto de emergencia: </label>
-            <input type="text" id="emergencyName">
-          </div>
+            <div title="¿A quién contactar en caso de emergencia?" class="divInput">
+              <label for="emergencyName">Contacto de emergencia: </label>
+              <input type="text" id="emergencyName">
+            </div>
 
-          <div title="Perfil de Facebook de tu contacto de emergencia">
-            <label for="emergencyFacebook">Perfil de Facebook del contacto de emergencia: </label>
-            <input type="text" id="emergencyFacebook">
-          </div>
+            <div  title="¿Tienes alguna alergia? Si son más de una, sepáralas con un espacio" class="divInput">
+              <label for="allergies">Alergias: </label>
+              <input type="text" id="allergies">
+            </div>
 
-          <div  title="¿Tienes alguna alergia? Si son más de una, sepáralas con un espacio">
-            <label for="allergies">Alergias: </label>
-            <input type="text" id="allergies">
-          </div>
+            <div  title="¿Algún dato extra que consideres NECESARIO añadir?" class="divInput">
+              <label for="notes">Notas: </label>
+              <input type="text" id="notes">
+            </div>
 
-          <div  title="¿Algún dato extra que consideres NECESARIO añadir?">
-            <label for="notes">Notas: </label>
-            <textarea id="notes" rows="4" cols="20"></textarea>
-          </div>
-
-          <button type="reset" name="clear">Limpiar</button>
-          <input type="button" value ="Cifrar" name="encode" id="toEncode" >
-          <input type="button" value="Descrifrar" name="decode" id="toDecode" >
-
-        </form>
+            <div id="formButtons">
+              <input type="button" value="LIMPIAR" name="clear" id="clearCard" class="buttons">
+              <input type="button" value ="CIFRAR" name="encode" id="toEncode" class="buttons" >
+              <input type="button" value="DESCIFRAR" name="decode" id="toDecode" class="buttons" >
+            </div>
+         </form>
+        </div>
     </div>
 
     
-    <div>
+    <div id="cardDone">
       <h2>¡Felicidades! Tu credencial de viaje está lista:</h2>
-      <div>
+      <div id="cardDiv">
+        <figure class="logo02">
+          <img src="images/logo02-travel-card.png" alt="">
+        </figure>
+
         <div>
-          <label>Nombre: </label>
+          <label class="cardData">Nombre: </label>
           <span id = "resultUsername"></span>
         </div>
 
         <div>
-          <label>Nacionalidad: </label>
+          <label class="cardData">Nacionalidad: </label>
           <span id = "resultNationality"></span>
         </div>
 
         <div>
-          <label>Contacto de emergencia: </label>
+          <label class="cardData">Contacto de emergencia: </label>
           <span id = "resultEmergencyName"></span>
         </div>
 
         <div>
-          <label>Perfil de Facebook del contacto de emergencia: </label>
-          <span id = "resultEmergencyFacebook"></span>
-        </div>
-
-        <div>
-          <label>Alergias: </label>
+          <label class="cardData">Alergias: </label>
           <span id = "resultAllergies"></span>
         </div>
 
         <div>
-          <label>Notas: </label>
+          <label class="cardData">Notas: </label>
           <span id = "resultNotes"></span>
         </div>
+
+        <div id="offsetShow">
+          <label class="cardData"># </label>
+          <span id="resultOffset"></span>
+        </div>
+
       </div>
+      <input type="button" value ="CREAR NUEVA CREDENCIAL" name="newCard" id="newCardButton" class="buttons" >
 
     </div>
     
     <script src="cipher.js"></script>
     <script src="form.js"></script>
   </body>
-  <footer>Creado por Mel :)</footer>
+  <footer><p>Creado por Mel :)</p></footer>
 </html>

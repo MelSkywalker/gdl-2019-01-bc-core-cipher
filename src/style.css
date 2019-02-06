@@ -1,0 +1,242 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: white;
+    text-align: center;
+
+}
+
+.indexContainer {
+    background-color: rgba(255, 255, 255, .7);
+    margin: auto;
+    width: 60%;
+    border-radius: 10px;
+}
+
+#indexBody {
+    background-image: url("images/viajes-bg.jpg");
+    background-size: cover;
+}
+
+.navContainer {
+    width: 80%;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+}
+
+header {
+    background: #ffcb21;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0 10% 0 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: right;
+}
+
+nav li {
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+nav li:hover{
+    background-color: #006a79;
+}
+
+nav > ul > li > a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+    
+.divInput {
+    display: flex;
+    justify-content: space-between;
+}
+
+.divInput input {
+    width: 90%;
+    padding: 5px;
+    font-size: 14px;
+}
+
+#offsetDiv {
+    justify-content: start;
+    width: 30%;
+}
+
+
+h1 {
+    font-family: 'Staatliches', cursive;
+    color: #e742ab;
+    font-size: 52px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Staatliches', cursive;
+    color: #a1b221;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+h3{
+    font-family: 'Staatliches', cursive;
+    color: #00a395;
+    font-size: 32px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding-top: 5%;
+}
+
+footer {
+    background-color: #00a395;
+    height: 7%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    color: white;
+    text-align: center;
+}
+
+footer p{
+    padding-bottom: 20px;
+}
+
+#indexLogo {
+    width: 20%;
+    height: auto;
+}
+
+#formButtons{
+    margin: auto;
+    position: relative;
+    padding-top: 30px;
+}
+
+#formButtons .buttons{
+    width: 33%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.buttons {
+    color: white;
+    background-color: #ffcb21;
+    font-size: 26px;
+    text-align: center;
+    width: 25%;
+    cursor: pointer;
+}
+
+#toForm {
+    padding: 2%;
+    font-size: 32px;
+    display: inline-block;
+    position: relative;
+}
+
+#toForm:hover, #clearCard:hover, #toEncode:hover, #toDecode:hover, #newCardButton:hover{
+    color: #006a79;
+}
+
+#newCardButton {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 32px;
+    display: inline-block;
+    position: relative;
+    width: 35%;
+    border-radius: 5px;
+}
+
+#userData {
+    margin: auto;
+    border: 1px solid;
+    text-align: left;
+    width: 50%;
+    border-radius: 10px;
+    background-color: rgba(240, 238, 238, 0.918);
+    padding: 20px;
+}
+
+label {
+    font-weight: bold;
+    padding: 3px 3px 3px 0;
+    display: inline-block;
+}
+
+input[type-text]{
+    padding: 12px;
+    border: 1px solid;
+    border-radius: 5px;
+    resize: vertical;
+    float: left;
+}
+
+form div {
+    padding: 3px;
+}
+
+.cardData {
+    padding: 4px;
+    font-weight: bolder;
+}
+
+#cardDone div span {
+    background-color:white;
+    padding: 4px;
+}
+
+#cardDiv {
+    margin: auto;
+    border: 1px solid;
+    font-size: 16px;
+    text-align: left;
+    width: 40%;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(240, 238, 238, 0.918);
+}
+
+#cardDiv span {
+    background-color: white;
+}
+
+#cardDone {
+    display:none;
+}
+
+#indexLogo {
+    width: 50%;
+    padding: 10px;
+    margin: auto;
+}
+
+.logo02 {
+    margin: auto;
+}

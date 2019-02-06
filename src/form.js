@@ -4,9 +4,10 @@ const encodedCard = () => {
     encodeUsername();
     encodeNationality();
     encodeEmergencyName();
-    encodeEmergencyFacebook();
     encodeAllergies();
     encodeNotes();
+    showCard();
+    showOffset();
   };
   
   //Ir a la credencial DECODIFICADA ya creada
@@ -15,15 +16,21 @@ const encodedCard = () => {
     decodeUsername();
     decodeNationality();
     decodeEmergencyName();
-    decodeEmergencyFacebook();
     decodeAllergies();
     decodeNotes();
+    showCard();
+    showOffset();
   };
   
     //Obtener offset
   const getOffset = () => {
     let offset = parseInt(document.getElementById('offset').value);
     return offset;
+  };
+
+  //Mostrar Offset
+  const showOffset = () => {
+    document.getElementById('resultOffset').innerHTML = getOffset();
   };
     
     //Guardar el valor escrito por el usuario y pasarlo a letras mayúsculas
@@ -46,10 +53,6 @@ const encodedCard = () => {
     document.getElementById('resultEmergencyName').innerHTML = cipher.encode(getOffset(),getString('emergencyName'));
   };
   
-  const encodeEmergencyFacebook = () => {
-    document.getElementById('resultEmergencyFacebook').innerHTML = cipher.encode(getOffset(),getString('emergencyFacebook'));
-  };
-  
   const encodeAllergies = () => {
     document.getElementById('resultAllergies').innerHTML = cipher.encode(getOffset(),getString('allergies'));
   };
@@ -70,11 +73,7 @@ const encodedCard = () => {
   const decodeEmergencyName = () => {
     document.getElementById('resultEmergencyName').innerHTML = cipher.decode(getOffset(),getString('emergencyName'));
   };
-  
-  const decodeEmergencyFacebook = () => {
-    document.getElementById('resultEmergencyFacebook').innerHTML = cipher.decode(getOffset(),getString('emergencyFacebook'));
-  };
-  
+    
   const decodeAllergies = () => {
     document.getElementById('resultAllergies').innerHTML = cipher.decode(getOffset(),getString('allergies'));
   };
@@ -83,6 +82,41 @@ const encodedCard = () => {
     document.getElementById('resultNotes').innerHTML = cipher.decode(getOffset(),getString('notes'));
   };
   
+  //Nueva credencial
+  //Borrar campos
+  const clearCard = () => {
+    document.getElementById('offset').value = "";
+    document.getElementById('username').value = "";
+    document.getElementById('nationality').value = "";
+    document.getElementById('emergencyName').value = "";
+    document.getElementById('allergies').value = "";
+    document.getElementById('notes').value = "";
+  };
+
+  const clearAll = () => {
+    clearCard();
+    hideCard();
+    document.getElementById('resultUsername').innerHTML = "";
+    document.getElementById('resultNationality').innerHTML = "";
+    document.getElementById('resultEmergencyName').innerHTML = "";
+    document.getElementById('resultAllergies').innerHTML = "";
+    document.getElementById('resultNotes').innerHTML = "";
+  };
+
+  //Esconder y mostrar credencial
+  const showCard = () => {
+    document.getElementById('cardForm').style.display = 'none';
+    document.getElementById('cardDone').style.display = 'block';
+  };
+
+  const hideCard = () => {
+    document.getElementById('cardForm').style.display = 'block';
+    document.getElementById('cardDone').style.display = 'none';
+  };
+
+
   //Event Listeners
+  document.getElementById('clearCard').addEventListener('click',clearCard,false);
   document.getElementById('toEncode').addEventListener('click',encodedCard,false);
   document.getElementById('toDecode').addEventListener('click',decodedCard,false);
+  document.getElementById('newCardButton').addEventListener('click',clearAll,false);
