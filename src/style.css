@@ -43,18 +43,16 @@ nav {
 }
 
 nav ul {
-    margin: 0 10% 0 0;
+    margin: 0;
     padding: 0;
     list-style-type: none;
     text-align: right;
 }
 
-nav li {
+nav.navContainer li {
+
     display: inline-block;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10%;
-    padding-right: 10%;
+    width: 130px;
 }
 
 nav li:hover{
@@ -62,6 +60,9 @@ nav li:hover{
 }
 
 nav > ul > li > a {
+    text-align: center;
+    display: block;
+    width: 100%;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -158,6 +159,18 @@ footer p{
     font-size: 32px;
     display: inline-block;
     position: relative;
+}
+
+@media (max-width: 576px) {
+    #toForm {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #toForm {
+        font-size: 12px;
+    }
 }
 
 #toForm:hover, #clearCard:hover, #toEncode:hover, #toDecode:hover, #newCardButton:hover{
