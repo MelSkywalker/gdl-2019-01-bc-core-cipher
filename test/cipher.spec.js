@@ -15,18 +15,13 @@ describe('cipher', () => {
     });
     // Hacker edition
     //
-    // Si decides implementar soporte para caracteres no alfabéticos descomenta
+    // Si decides implementar soporte para minúsculas descomenta
     // el test a continuación.
     //
 
     it ('debería retornar "hijklmnopqrstuvwxyzabcdefg" para "abcdefghijklmnopqrstuvwxyz" con offset 33', () => {
       assert.equal(cipher.encode(33,"abcdefghijklmnopqrstuvwxyz"),"hijklmnopqrstuvwxyzabcdefg");
     });
-
-     it('debería retornar " !@" para " !@"', () => {
-       assert.equal(cipher.encode(33, ' !@'),' !@');
-     });
-
     //
     // Hacker edition
     //
