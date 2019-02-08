@@ -20,6 +20,7 @@ const encodedCard = () => {
     decodeNotes();
     showCard();
     showOffset();
+    event.preventDefault();
   };
   
     //Obtener offset
@@ -33,10 +34,9 @@ const encodedCard = () => {
     document.getElementById('resultOffset').innerHTML = getOffset();
   };
     
-    //Guardar el valor escrito por el usuario y pasarlo a letras mayúsculas
+    //Guardar el valor escrito por el usuario
   const getString = (userInfo) => {
-    let phrase = (document.getElementById(userInfo).value).toUpperCase();
-    
+    let phrase = document.getElementById(userInfo).value;
     return phrase;
   };
   
