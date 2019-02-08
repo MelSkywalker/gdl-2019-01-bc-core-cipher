@@ -28,7 +28,9 @@
 
             <div title="Escribe el número que será tu clave" class="divInput" id="offsetDiv">
               <label for="offset">Clave (Número): </label>
-              <input type="number" name = "offset" id="offset">
+              <!--<input type="number" name = "offset" id="offset">-->
+              <input type="number" name = "offset" id = "offset" onkeydown="javascript: return event.keyCode === 8 || event.keyCode === 46 ? true : !isNaN(Number(event.key))" />
+
             </div>
 
             <div title="Escribe tu nombre completo" class="divInput">
