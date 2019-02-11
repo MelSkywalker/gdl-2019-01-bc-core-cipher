@@ -11,7 +11,7 @@ const encodedCard = () => {
   };
   
   //Ir a la credencial DECODIFICADA ya creada
-  const decodedCard = () => {
+  const decodedCard = () => { 
     //Llamar a todas las funciones que decodifican cada campo
     decodeUsername();
     decodeNationality();
